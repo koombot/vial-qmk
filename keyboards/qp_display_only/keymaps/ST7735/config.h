@@ -11,7 +11,7 @@
 #undef LCD_OFFSET_Y
 #define LCD_OFFSET_Y 26
 #define ST7735_NO_AUTOMATIC_VIEWPORT_OFFSETS
-#define LCD_INVERT_COLOR
+
 
 // 270 rotation matches the big_knob reference; change to 90 if image is mirrored
 #undef LCD_ROTATION

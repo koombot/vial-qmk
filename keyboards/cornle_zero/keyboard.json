@@ -1,0 +1,125 @@
+{
+    "manufacturer": "Graham",
+    "keyboard_name": "cornle_zero",
+    "maintainer": "Graham",
+    "bootloader": "rp2040",
+    "diode_direction": "COL2ROW",
+    "encoder": {
+        "rotary": [
+            {"pin_a": "GP14", "pin_b": "GP15"}  //TODO: update with actual encoder pins allows for one rotary encoder with pin A and pin B specified
+        ]
+    },
+    "features": {
+        "bootmagic": true,  //allows for boot magic functionality
+        "encoder": true,    //allows the use of rotary encoders
+        "extrakey": true,   //allows the use of extra keys like media keys and function keys
+        "mousekey": true,   //allows the keyboard to control the mouse cursor
+        "nkro": true,       //allows for N-Key Rollover, which means that multiple keys can be pressed at the same time and all of them will be registered
+        "rgb_matrix": true, //allows for RGB lighting effects on the keyboard
+        "wpm": true         //allows for Words Per Minute (WPM) tracking, which can be used to display typing speed on an OLED or other display
+    },
+    "matrix_pins": {    //TODO: update with actual matrix pins
+        "cols": ["C2", "C2", "C2", "C2", "C2", "C2", "C2", "C2", "C2", "C2", "C2", "C2", "C2", "C2"],
+        "rows": ["D1", "D1", "D1", "D1"]
+    },
+    "processor": "RP2040",
+    "rgb_matrix": {
+        "sleep": true,
+        "animations": {
+            "band_pinwheel_sat": true,
+            "band_pinwheel_val": true,
+            "band_sat": true,
+            "band_spiral_sat": true,
+            "band_spiral_val": true,
+            "band_val": true,
+            "breathing": true,
+            "cycle_all": true,
+            "cycle_left_right": true,
+            "cycle_out_in": true,
+            "cycle_out_in_dual": true,
+            "cycle_pinwheel": true,
+            "cycle_spiral": true,
+            "cycle_up_down": true,
+            "digital_rain": true,
+            "dual_beacon": true,
+            "gradient_left_right": true,
+            "gradient_up_down": true,
+            "hue_breathing": true,
+            "hue_pendulum": true,
+            "hue_wave": true,
+            "jellybean_raindrops": true,
+            "multisplash": true,
+            "pixel_flow": true,
+            "pixel_rain": true,
+            "rainbow_beacon": true,
+            "rainbow_moving_chevron": true,
+            "rainbow_pinwheels": true,
+            "raindrops": true,
+            "solid_multisplash": true,
+            "solid_reactive": true,
+            "solid_reactive_cross": true,
+            "solid_reactive_multicross": true,
+            "solid_reactive_multinexus": true,
+            "solid_reactive_multiwide": true,
+            "solid_reactive_nexus": true,
+            "solid_reactive_simple": true,
+            "solid_reactive_wide": true,
+            "solid_splash": true,
+            "splash": true,
+            "typing_heatmap": true
+        },
+    "url": "",
+    "usb": {
+        "device_version": "1.0.0",
+        "pid": "0x0000",
+        "vid": "0xFEED"
+    },
+    "layouts": {
+        "LAYOUT_split_3x6_3": {
+            "layout": [
+                {"matrix": [0, 0], "x": 0, "y": 0.25},
+                {"matrix": [0, 1], "x": 1, "y": 0.25},
+                {"matrix": [0, 2], "x": 2, "y": 0.125},
+                {"matrix": [0, 3], "x": 3, "y": 0},
+                {"matrix": [0, 4], "x": 4, "y": 0.125},
+                {"matrix": [0, 5], "x": 5, "y": 0.25},
+                {"matrix": [0, 8], "x": 8, "y": 0.25},
+                {"matrix": [0, 9], "x": 9, "y": 0.125},
+                {"matrix": [0, 10], "x": 10, "y": 0},
+                {"matrix": [0, 11], "x": 11, "y": 0.125},
+                {"matrix": [0, 12], "x": 12, "y": 0.25},
+                {"matrix": [0, 13], "x": 13, "y": 0.25},
+                {"matrix": [1, 0], "x": 0, "y": 1.25},
+                {"matrix": [1, 1], "x": 1, "y": 1.25},
+                {"matrix": [1, 2], "x": 2, "y": 1.125},
+                {"matrix": [1, 3], "x": 3, "y": 1},
+                {"matrix": [1, 4], "x": 4, "y": 1.125},
+                {"matrix": [1, 5], "x": 5, "y": 1.25},
+                {"matrix": [1, 8], "x": 8, "y": 1.25},
+                {"matrix": [1, 9], "x": 9, "y": 1.125},
+                {"matrix": [1, 10], "x": 10, "y": 1},
+                {"matrix": [1, 11], "x": 11, "y": 1.125},
+                {"matrix": [1, 12], "x": 12, "y": 1.25},
+                {"matrix": [1, 13], "x": 13, "y": 1.25},
+                {"matrix": [2, 0], "x": 0, "y": 2.25},
+                {"matrix": [2, 1], "x": 1, "y": 2.25},
+                {"matrix": [2, 2], "x": 2, "y": 2.125},
+                {"matrix": [2, 3], "x": 3, "y": 2},
+                {"matrix": [2, 4], "x": 4, "y": 2.125},
+                {"matrix": [2, 5], "x": 5, "y": 2.25},
+                {"matrix": [2, 8], "x": 8, "y": 2.25},
+                {"matrix": [2, 9], "x": 9, "y": 2.125},
+                {"matrix": [2, 10], "x": 10, "y": 2},
+                {"matrix": [2, 11], "x": 11, "y": 2.125},
+                {"matrix": [2, 12], "x": 12, "y": 2.25},
+                {"matrix": [2, 13], "x": 13, "y": 2.25},
+                {"matrix": [3, 3], "x": 3.5, "y": 3.25},
+                {"matrix": [3, 4], "x": 4.5, "y": 3.5},
+                {"matrix": [3, 5], "x": 5.5, "y": 3.75},
+                {"matrix": [3, 7], "x": 7.5, "y": 3.75},
+                {"matrix": [3, 8], "x": 8.5, "y": 3.5},
+                {"matrix": [3, 9], "x": 9.5, "y": 3.25}
+            ]
+        }
+    }
+}

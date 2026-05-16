@@ -14,6 +14,7 @@ enum sofle_layers {
     _LOWER,
     _RAISE,
     _ADJUST,
+    _NUMPAD,
 };
 
 enum custom_keycodes {
@@ -42,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         QK_GESC, KC_Q,            KC_W,            KC_E,             KC_R,             KC_T,                        KC_Y,    KC_U,             KC_I,             KC_O,             KC_P,             KC_BSPC,
         KC_TAB,  LGUI_T(KC_A),    LALT_T(KC_S),    LCTL_T(KC_D),     LSFT_T(KC_F),     KC_G,                        KC_H,    RSFT_T(KC_J),     RCTL_T(KC_K),     RALT_T(KC_L),     RGUI_T(KC_SCLN),  KC_QUOT,
         KC_LSFT, KC_Z,            KC_X,            KC_C,             KC_V,             KC_B,    KC_MUTE,   XXXXXXX,  KC_N,    KC_M,             KC_COMM,          KC_DOT,           KC_SLSH,          KC_RSFT,
-                                  KC_LGUI,         KC_LALT,          KC_LCTL,          TL_LOWR, KC_ENT,    KC_SPC,   TL_UPPR, KC_RCTL,          KC_RALT,          KC_RGUI
+                                  KC_LGUI,         KC_LALT,          KC_LCTL,          TL_LOWR, KC_ENT,    LT(_NUMPAD,KC_SPC),   TL_UPPR, KC_RCTL,          KC_RALT,          KC_RGUI
     ),
     [_LOWER] = LAYOUT(
         _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
@@ -64,6 +65,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                 RM_NEXT, KC_KP_4,     KC_KP_5,     KC_KP_6,        KC_KP_COMMA, XXXXXXX,
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX, XXXXXXX, KC_KP_1, KC_KP_2,     KC_KP_3,     KC_KP_ENTER,    XXXXXXX,
                           _______, _______, _______, _______, _______,      _______, _______, KC_KP_0, KC_KP_DOT, _______
+    ),
+    [_NUMPAD] = LAYOUT(
+        CG_TOGG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                 XXXXXXX, KC_NUM_LOCK, KC_KP_SLASH, KC_KP_ASTERISK, KC_KP_MINUS, XXXXXXX,
+        QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                 KC_DEL, KC_KP_7,     KC_KP_8,     KC_KP_9,        KC_KP_PLUS, KC_BSPC,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                 XXXXXXX, KC_KP_4,     KC_KP_5,     KC_KP_6,        KC_KP_COMMA, XXXXXXX,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX, XXXXXXX, KC_KP_1, KC_KP_2,     KC_KP_3,     KC_KP_ENTER,    XXXXXXX,
+                          _______, _______, _______, _______, _______,      _______, _______, KC_KP_0, KC_KP_DOT, XXXXXXX
     )
     // clang-format on
 };
@@ -136,6 +144,7 @@ static void render_status(void) {
         case _LOWER:  oled_write_ln_P(PSTR("LOWER"), false); break;
         case _RAISE:  oled_write_ln_P(PSTR("RAISE"), false); break;
         case _ADJUST: oled_write_ln_P(PSTR("ADJST"), false); break;
+        case _NUMPAD: oled_write_ln_P(PSTR("NUMPD"), false); break;
         default:      oled_write_ln_P(PSTR("????"),  false); break;
     }
     oled_write_ln_P(PSTR(""), false);
@@ -466,5 +475,6 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     [1] = {ENCODER_CCW_CW(_______, _______), ENCODER_CCW_CW(LWIN(LCTL(KC_LEFT)), LWIN(LCTL(KC_RGHT)))},
     [2] = {ENCODER_CCW_CW(_______, _______), ENCODER_CCW_CW(_______, _______)},
     [3] = {ENCODER_CCW_CW(RGB_VAD, RGB_VAI), ENCODER_CCW_CW(RGB_RMOD, RGB_MOD)},
+    [4] = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_PGDN, KC_PGUP)},
 };
 #endif
