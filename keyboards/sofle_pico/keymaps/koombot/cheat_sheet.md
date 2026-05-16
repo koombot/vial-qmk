@@ -56,3 +56,6 @@ vial-qmk/
 - Run all `make` commands from the root of `vial-qmk/`
 - Use QMK MSYS2 terminal on Windows, not PowerShell
 - Compiled firmware is in `.build/` as a `.uf2` file
+
+## Image Generation
+-  If you ever regenerate  from source images, set "Byte orientation" to Vertical in image2cpp.
