@@ -49,28 +49,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                   KC_LGUI,         KC_LALT,          KC_LCTL,          TL_LOWR, KC_ENT,    LT(_NUMPAD,KC_SPC),   TL_UPPR, KC_RCTL,          KC_RALT,          KC_RGUI
     ),
     [_LOWER] = LAYOUT(
-        _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
+        _______, ALT_18, ALT_14, ALT_38, ALT_12, ALT_58,                               ALT_34, ALT_78, ALT_DEG, ALT_SQ2, ALT_SQ3, _______,
         KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                               KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______,
         KC_SPC, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,                            KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_PIPE,
         _______, KC_EQL,  KC_MINS, KC_PLUS, KC_LCBR, KC_RCBR, _______,          _______, KC_LBRC, KC_RBRC, KC_SCLN, KC_COLN, KC_BSLS, _______,
                           _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______
     ),
     [_RAISE] = LAYOUT(
-        _______, ALT_18, ALT_14, ALT_38, ALT_12, ALT_58,                               ALT_34, ALT_78, ALT_DEG, ALT_SQ2, ALT_SQ3, _______,
+        _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                               XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
         _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                          XXXXXXX, KC_INSERT, KC_UP,   KC_PSCR, KC_PGUP, KC_BSPC,
         _______, C(KC_A), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                          XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX,  KC_BSPC,
         _______, C(KC_Z), C(KC_X), C(KC_C), C(KC_V), XXXXXXX, _______,        _______, XXXXXXX, KC_DEL, XXXXXXX, KC_PGDN, XXXXXXX, _______,
                           _______, _______, _______, _______, _______,        _______, _______, _______, _______, _______
     ),
     [_ADJUST] = LAYOUT(
-        CG_TOGG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                 XXXXXXX, KC_NUM_LOCK, KC_KP_SLASH, KC_KP_ASTERISK, KC_KP_MINUS, XXXXXXX,
-        QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                 RM_TOGG, KC_KP_7,     KC_KP_8,     KC_KP_9,        KC_KP_PLUS, XXXXXXX,
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                 RM_NEXT, KC_KP_4,     KC_KP_5,     KC_KP_6,        KC_KP_COMMA, XXXXXXX,
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX, XXXXXXX, KC_KP_1, KC_KP_2,     KC_KP_3,     KC_KP_ENTER,    XXXXXXX,
-                          _______, _______, _______, _______, _______,      _______, _______, KC_KP_0, KC_KP_DOT, _______
+        CG_TOGG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                 XXXXXXX, XXXXXXX,     XXXXXXX,     XXXXXXX,        XXXXXXX, XXXXXXX,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                 XXXXXXX, XXXXXXX,     XXXXXXX,     XXXXXXX,        XXXXXXX, XXXXXXX,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,     XXXXXXX,     XXXXXXX,    XXXXXXX,
+                          _______, _______, _______, _______, _______,      _______, _______, XXXXXXX, XXXXXXX, _______
     ),
     [_NUMPAD] = LAYOUT(
-        CG_TOGG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                 XXXXXXX, KC_NUM_LOCK, KC_KP_SLASH, KC_KP_ASTERISK, KC_KP_MINUS, XXXXXXX,
+        CG_TOGG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                 KC_CALC, KC_NUM_LOCK, KC_KP_SLASH, KC_KP_ASTERISK, KC_KP_MINUS, XXXXXXX,
         QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                 KC_DEL, KC_KP_7,     KC_KP_8,     KC_KP_9,        KC_KP_PLUS, KC_BSPC,
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                 XXXXXXX, KC_KP_4,     KC_KP_5,     KC_KP_6,        KC_KP_COMMA, XXXXXXX,
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX, XXXXXXX, KC_KP_1, KC_KP_2,     KC_KP_3,     KC_KP_ENTER,    XXXXXXX,
