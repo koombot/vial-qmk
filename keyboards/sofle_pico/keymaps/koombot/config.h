@@ -15,3 +15,7 @@
 
 #define SPLIT_USB_DETECT
 #define SPLIT_WPM_ENABLE
+
+#define IGNORE_MOD_TAP_INTERRUPT
+
+
