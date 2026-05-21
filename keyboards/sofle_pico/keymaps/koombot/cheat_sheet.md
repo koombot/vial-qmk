@@ -59,3 +59,12 @@ vial-qmk/
 
 ## Image Generation
 -  If you ever regenerate  from source images, set "Byte orientation" to Vertical in image2cpp.
+
+## shift backspace sends delete instead
+-  Go to vial.rocks
+- pen Vial → Key Overrides tab
+- Click an empty slot
+- Set Trigger key: Backspace
+- Set Trigger mods: Shift (left, right, or both)
+- Set Replacement: Delete
+- Make sure the entry is enabled
