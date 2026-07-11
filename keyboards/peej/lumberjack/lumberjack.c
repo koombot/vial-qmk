@@ -16,9 +16,9 @@
 
 #include "lumberjack.h"
 
-void keyboard_pre_init_kb() {
-    gpio_set_pin_output(LED1);
-    gpio_set_pin_output(LED2);
+bool led_update_kb(led_t led_state) {
+    writePin(LED1, led_state.caps_lock);
+    writePin(LED2, led_state.num_lock);
 
-    keyboard_pre_init_user();
+    return led_update_user(led_state);
 }
