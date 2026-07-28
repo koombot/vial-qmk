@@ -1,5 +1,5 @@
 #Firmware Optimisation
-LTO_ENABLE = no  # Disabled: suspected cause of intermittent USB disconnects on V-USB (atmega328p, no hardware USB)
+LTO_ENABLE = yes # Re-enabled: USB disconnects traced to a board short, not LTO; needed to recover flash headroom for the game layer
 BOOTMAGIC_ENABLE = no # Disable Bootmagic to reduce firmware size
 TAP_DANCE_ENABLE = no # Disable Tap Dance to reduce firmware size
 COMBO_ENABLE = no # Disable Combo to reduce firmware size
@@ -13,6 +13,7 @@ QMK_SETTINGS = yes
 
 TRI_LAYER_ENABLE = no # Unused: thumb keys not populated on 2u board; tri-layer handled via layer_state_set_user instead
 CAPS_WORD_ENABLE = yes
+DEFERRED_EXEC_ENABLE = yes # Used for the game-layer corner key chord debounce
 
 BOOTLOADER = usbasploader
 

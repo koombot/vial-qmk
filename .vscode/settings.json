@@ -53,5 +53,6 @@
             "fileMatch": ["keymap.json"],
             "url": "./data/schemas/keymap.jsonschema"
         }
-    ]
+    ],
+    "idf.currentSetup": "C:\\esp\\v5.5.3\\esp-idf"
 }
